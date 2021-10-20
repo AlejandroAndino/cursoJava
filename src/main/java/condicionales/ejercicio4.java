@@ -16,11 +16,17 @@ public class ejercicio4 {
         //Ingreso de datos
         valorCompra = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor de la compra: "));
 
-        //Formula
-        totalPagar = valorCompra - (descuento * valorCompra);
+        //Condicional
+        if (valorCompra > 300) {
 
-        //Salida por pantalla
-        JOptionPane.showMessageDialog(null, "El valor total a pagar es: " + totalPagar);
+            totalPagar = valorCompra - (valorCompra * descuento);
 
+            JOptionPane.showMessageDialog(null, "Total a pagar es : " + totalPagar);
+        } else {
+            
+            totalPagar = valorCompra;
+            
+            JOptionPane.showMessageDialog(null, "Total a pagar: " + totalPagar);
+        }
     }
 }
